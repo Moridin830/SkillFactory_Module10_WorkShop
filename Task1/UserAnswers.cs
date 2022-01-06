@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
+    /// <summary>
+    /// Класс, описывающий функционал взаимодействия с пользователем
+    /// </summary>
     public class UserAnswers
     {
+        /// <summary>
+        /// Метод, запрашивающий у пользователя ввод значения и преобразующий введенное значение в тип 'double'
+        /// </summary>
+        /// <param name="Question"></param>
+        /// <param name="Answer"></param>
         public static void ReadUserAnswer(string Question, out double Answer)
         {
             Console.Write(Question);
