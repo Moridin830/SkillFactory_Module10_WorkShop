@@ -7,12 +7,24 @@ using System.Threading.Tasks;
 namespace Task2
 {
     /// <summary>
-    /// Интерфейс, описывающий функционал логгера
+    ///  Класс для описания логгера
     /// </summary>
-    public interface ILogger
+    internal class Logger : ILogger
     {
-        void Event(string message);
+        // Метод, выводящий в консоль лог ошибки; цвет текста: красный.
+        public void Error(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(message);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
 
-        void Error(string message);
+        // // Метод, выводящий в консоль лог события; цвет текста: синий.
+        public void Event(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(message);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }
